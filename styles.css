@@ -1,0 +1,91 @@
+i {
+  font-size: 100px;
+}
+
+.weather-app {
+  position: relative;
+  border: 1px solid #e6e7e9;
+  border-radius: 20px;
+  margin-top: 60px;
+
+  max-width: 500px;
+  padding: 20px;
+  padding-right: 0;
+  background: linear-gradient(#6daed6, #73bae1);
+}
+h1,
+h2,
+h3 {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 65px;
+  color: #f9fbfd;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+}
+h1 i {
+  color: blue;
+  margin-bottom: 0px;
+}
+.celsius {
+  position: absolute;
+  bottom: 289px;
+  left: 312px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 100;
+  color: #f9fbfd;
+}
+.fahrenheit {
+  position: absolute;
+  bottom: 267px;
+  left: 312px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 100;
+  color: #f9fbfd;
+}
+h6 {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  color: #f9fbfd;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+}
+p {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 100;
+  color: #f9fbfd;
+  margin-top: -10px;
+  margin-right: 8px;
+}
+.col {
+  color: #f9fbfd;
+}
+div i {
+  color: purple;
+}
+.search-form {
+  margin-bottom: 20px;
+}
+.prescipitation {
+  color: rgb(55, 55, 226);
+}
+.presc,
+.windII {
+  padding-top: 15px;
+}
+.wind {
+  color: grey;
+}
+.sunrise {
+  color: rgb(226, 173, 75);
+}
+.sunset {
+  color: rgb(216, 79, 29);
+}
+.col {
+  text-align: center;
+}
