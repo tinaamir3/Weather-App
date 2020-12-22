@@ -23,6 +23,9 @@ h3 {
   margin-bottom: 0px;
   padding-bottom: 0px;
 }
+h6 {
+  text-transform: capitalize;
+}
 h1 i {
   color: blue;
   margin-bottom: 0px;
