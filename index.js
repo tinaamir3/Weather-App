@@ -45,9 +45,16 @@ iconElement.setAttribute(
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
     );
 } 
+function search(event){
+    event.preventDefault();
+    let cityInputElement= document.querySelector("#city-input");
+    console.log(cityInputElement.value);
+}
  let apiKey= "1b8abfcfd13f6be4d6f095c6de05ba7f";
  let city= "Toronto";
  let apiUrl= `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
+let form= document.querySelector("#search-form");
+form.addEventListener("submit",search);
 
  axios.get(apiUrl).then(displayTemperature);
