@@ -31,6 +31,7 @@
     let dateTimeElement= document.querySelector("#dateTime");
     let sunriseElement=document.querySelector("#sunrise")
     let sunsetElement=document.querySelector("#sunset");
+    let iconElement=document.querySelector("#icon");
     temperatureElement.innerHTML= Math.round(response.data.main.temp);
 cityElement.innerHTML=response.data.name;
 feelsLikeElement.innerHTML=Math.round(response.data.main.feels_like);
@@ -39,10 +40,14 @@ windElement.innerHTML=Math.round(response.data.wind.speed);
 dateTimeElement.innerHTML=formatDate(response.data.dt * 1000);
 sunriseElement.innerHTML=formatTime(response.data.sys.sunrise*1000);
 sunsetElement.innerHTML=formatTime(response.data.sys.sunset*1000);
-console.log(response.data);
+iconElement.setAttribute(
+    "src", 
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+    );
 } 
  let apiKey= "1b8abfcfd13f6be4d6f095c6de05ba7f";
- let apiUrl= `https://api.openweathermap.org/data/2.5/weather?q=Toronto&appid=${apiKey}&units=metric`;
+ let city= "Toronto";
+ let apiUrl= `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
 
  axios.get(apiUrl).then(displayTemperature);
