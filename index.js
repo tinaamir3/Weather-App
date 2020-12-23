@@ -1,15 +1,45 @@
+ function formatDate(timestamp){
+     let date= new Date(timestamp);
+     let hours= date.getHours();
+     let minutes=date.getMinutes();
+     let days= [
+         "Sunday", 
+         "Monday", 
+         "Tuesday",
+         "Wednesday",
+         "Thursday",
+         "Friday",
+         "Saturday"
+        ];
+         let day= days[date.getDay()];
+         return `${day}, ${hours}:${minutes}`;
+ }
+ function formatTime(timestamp){
+     let date= new Date(timestamp);
+     let hours= date.getHours();
+     let minutes=date.getMinutes();
+    
+         return `${hours}:${minutes}`;
+ }
+
  function displayTemperature(response){
     let temperatureElement= document.querySelector("#temperature");
     let cityElement= document.querySelector("#city");
     let feelsLikeElement= document.querySelector("#feels");
     let descriptionElement= document.querySelector("#description");
     let windElement= document.querySelector("#windII");
+    let dateTimeElement= document.querySelector("#dateTime");
+    let sunriseElement=document.querySelector("#sunrise")
+    let sunsetElement=document.querySelector("#sunset");
     temperatureElement.innerHTML= Math.round(response.data.main.temp);
 cityElement.innerHTML=response.data.name;
 feelsLikeElement.innerHTML=Math.round(response.data.main.feels_like);
 descriptionElement.innerHTML=response.data.weather[0].description;
 windElement.innerHTML=Math.round(response.data.wind.speed);
-console.log (response.data);
+dateTimeElement.innerHTML=formatDate(response.data.dt * 1000);
+sunriseElement.innerHTML=formatTime(response.data.sys.sunrise*1000);
+sunsetElement.innerHTML=formatTime(response.data.sys.sunset*1000);
+console.log(response.data);
 } 
  let apiKey= "1b8abfcfd13f6be4d6f095c6de05ba7f";
  let apiUrl= `https://api.openweathermap.org/data/2.5/weather?q=Toronto&appid=${apiKey}&units=metric`;

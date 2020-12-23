@@ -32,17 +32,17 @@
     </form>
 
     <h1 id="city">- <br /></h1>
-    <h6>Time</h6>
+    <h6 id="dateTime"></h6>
     <h6 id="description">-</h6>
     <h2>
         <img src="https://ssl.gstatic.com/onebox/weather/64/sunny_s_cloudy.png" alt="Sunny cloud" width="100px" />
     </h2>
     <h3 id="temperature">-</h3>
     <a class=celsius href="#" id="celsius">
-        C
+        °C
     </a>
     <a class=fahrenheit href="#" id="fahrenheit">
-        F
+        °F
     </a>
 
     <p>Feels like: <strong id="feels"> - </strong>°</p>
@@ -57,11 +57,11 @@
         </div>
         <div class="col">
             <i class="fas fa-arrow-up fa-1x sunrise"></i> <br />Sunrise:<br />
-            7:12
+            <span id="sunrise"></span>
         </div>
         <div class="col">
             <i class="fas fa-arrow-down fa-1x sunset"></i><br />Sunset:<br />
-            19:05
+            <span id="sunset"></span>
         </div>
     </div>
     <hr />
