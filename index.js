@@ -32,6 +32,7 @@
     let sunriseElement=document.querySelector("#sunrise")
     let sunsetElement=document.querySelector("#sunset");
     let iconElement=document.querySelector("#icon");
+
     temperatureElement.innerHTML= Math.round(response.data.main.temp);
 cityElement.innerHTML=response.data.name;
 feelsLikeElement.innerHTML=Math.round(response.data.main.feels_like);
@@ -44,17 +45,18 @@ iconElement.setAttribute(
     "src", 
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
     );
+    iconElement.setAttribute("alt", response.data.weather[0].description);
 } 
 function search(event){
     event.preventDefault();
     let cityInputElement= document.querySelector("#city-input");
-    console.log(cityInputElement.value);
 }
  let apiKey= "1b8abfcfd13f6be4d6f095c6de05ba7f";
  let city= "Toronto";
  let apiUrl= `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
+ axios.get(apiUrl).then(displayTemperature);
+
 let form= document.querySelector("#search-form");
 form.addEventListener("submit",search);
 
- axios.get(apiUrl).then(displayTemperature);
