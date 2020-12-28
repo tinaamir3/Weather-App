@@ -27,20 +27,20 @@
     let cityElement= document.querySelector("#city");
     let feelsLikeElement= document.querySelector("#feels");
     let descriptionElement= document.querySelector("#description");
-    let windElement= document.querySelector("#windII");
+    let windElement= document.querySelector("#wind");
+    let humidityElement=document.querySelector("#humidity");
     let dateTimeElement= document.querySelector("#dateTime");
-    let sunriseElement=document.querySelector("#sunrise")
-    let sunsetElement=document.querySelector("#sunset");
     let iconElement=document.querySelector("#icon");
+
+    console.log(response.data);
 
     temperatureElement.innerHTML= Math.round(response.data.main.temp);
 cityElement.innerHTML=response.data.name;
 feelsLikeElement.innerHTML=Math.round(response.data.main.feels_like);
 descriptionElement.innerHTML=response.data.weather[0].description;
 windElement.innerHTML=Math.round(response.data.wind.speed);
+humidityElement.innerHTML=(response.data.main.humidity);
 dateTimeElement.innerHTML=formatDate(response.data.dt * 1000);
-sunriseElement.innerHTML=formatTime(response.data.sys.sunrise*1000);
-sunsetElement.innerHTML=formatTime(response.data.sys.sunset*1000);
 iconElement.setAttribute(
     "src", 
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
@@ -57,8 +57,9 @@ function handleSubmit(event){
     let cityInputElement= document.querySelector("#city-input");
 search(cityInputElement.value);
 }
-search("Sydney");
+
+
+search("Toronto");
 
 let form= document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
-

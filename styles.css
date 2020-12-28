@@ -33,7 +33,7 @@ h1 i {
 .celsius {
   position: absolute;
   bottom: 289px;
-  left: 312px;
+  left: 285px;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 16px;
   font-weight: 100;
@@ -41,8 +41,8 @@ h1 i {
 }
 .fahrenheit {
   position: absolute;
-  bottom: 267px;
-  left: 312px;
+  bottom: 289px;
+  left: 314px;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 16px;
   font-weight: 100;
@@ -68,26 +68,18 @@ p {
   color: #f9fbfd;
 }
 div i {
-  color: purple;
+  color: rgb(2, 2, 170);
+  font-size: 15px;
 }
 .search-form {
   margin-bottom: 20px;
 }
 .prescipitation {
-  color: rgb(55, 55, 226);
+  color: rgb(77, 165, 238);
 }
-.presc,
-.windII {
-  padding-top: 15px;
-}
+
 .wind {
   color: grey;
-}
-.sunrise {
-  color: rgb(226, 173, 75);
-}
-.sunset {
-  color: rgb(216, 79, 29);
 }
 .col {
   text-align: center;
