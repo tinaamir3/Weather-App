@@ -11,7 +11,7 @@ i {
   max-width: 500px;
   padding: 20px;
   padding-right: 0;
-  background: linear-gradient(#6daed6, #73bae1);
+  background: linear-gradient(#d9a7c7, #fffcdc);
 }
 h1,
 h2,
@@ -65,7 +65,7 @@ p {
   margin-right: 8px;
 }
 .col {
-  color: #f9fbfd;
+  color: #d9a7c7;
 }
 div i {
   color: rgb(2, 2, 170);
@@ -83,4 +83,7 @@ div i {
 }
 .col {
   text-align: center;
+}
+.button {
+  color: #d9a7c7;
 }
